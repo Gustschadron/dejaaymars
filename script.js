@@ -2,7 +2,7 @@ const LINKS = {
   instagram:  "https://instagram.com/mars.deejay",
   tiktok:     "https://tiktok.com/@mars.dj",
   soundcloud: "https://soundcloud.com/lars-cornet-880652158",
-  booking:    "https://mail.google.com/mail/?view=cm&fs=1&to=marsbe.info@gmail.com",
+  booking: "https://mail.google.com/mail/?view=cm&fs=1&to=marsbe.info@gmail.com&su=Booking%20Mars&body=Hey%20Mars,%0A%0AI%20would%20like%20to%20book%20you%20for...",
   release:    "https://soundcloud.com/lars-cornet-880652158"
 };
 
@@ -21,7 +21,7 @@ const ICONS = {
 
 const ROWS = [
     { key:'release',    name:'Pluto EP',   tag:'Stream nu' },
-    { key:'booking',    name:'Booking',    tag:'Boek Mars' },
+    { key:'booking',    name:'Booking  - marsbe.info@gmail.com',    tag:'Boek Mars' },
     { key:'instagram',  name:'Instagram',  tag:'Follow' },
     { key:'tiktok',     name:'TikTok',     tag:'Follow' },
     { key:'soundcloud', name:'SoundCloud', tag:'Listen' },
