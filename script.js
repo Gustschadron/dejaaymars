@@ -2,7 +2,7 @@ const LINKS = {
   instagram:  "https://instagram.com/mars.deejay",
   tiktok:     "https://tiktok.com/@mars.dj",
   soundcloud: "https://soundcloud.com/lars-cornet-880652158",
-  booking:    "https://superform.be/artist/mars/",
+  booking:    "https://mail.google.com/mail/?view=cm&fs=1&to=marsbe.info@gmail.com",
   release:    "https://soundcloud.com/lars-cornet-880652158"
 };
 
