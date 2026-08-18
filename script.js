@@ -6,7 +6,29 @@ const LINKS = {
   release:    "https://soundcloud.com/lars-cornet-880652158"
 };
 
-document.getElementById('nav-book').href = LINKS.booking;
+function openBooking() {
+  const email = "marsbe.info@gmail.com";
+  const subject = "Booking Mars";
+  const body = "Hey Mars,\n\nI would like to book you for...";
+
+  if (/android|iPhone|iPad|iPod/i.test(navigation.userAgent)) {
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+  else
+  {
+    window.open(
+      `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
+      "_blank"
+    );
+  }
+
+}
+
+document.getElementById('nav-book').href = '#';
+document.getElementById('nav-book').onclick = (e) => {
+  e.preventDefault();
+  openBooking();
+};
 document.getElementById('nav-cta-btn').href = LINKS.release;
 document.getElementById('hero-listen').href = LINKS.release;
 document.getElementById('release-listen').href = LINKS.release;
@@ -31,8 +53,16 @@ const listEl = document.getElementById('link-list');
 ROWS.forEach((row, i) => {
   const a = document.createElement('a');
   a.className = 'track-row';
+  if (row.key === 'booking') {
+  a.href = '#';
+  a.onclick = (e) => {
+    e.preventDefault();
+    openBooking();
+  };
+} else {
   a.href = LINKS[row.key];
-  a.target = row.key === 'booking' ? '_self' : '_blank';
+  a.target = '_blank';
+}
   a.rel = 'noopener';
   a.innerHTML = `
     <span class="track-num">${String(i+1).padStart(2,'0')}</span>
